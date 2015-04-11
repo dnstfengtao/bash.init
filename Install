@@ -1,0 +1,24 @@
+#!/bin/bash
+TEMP_DIR_NAME="tmp"
+exclue_file_arr="Install README.md tmp"
+dir=$(ls ./)
+
+currentDir=$(pwd)
+
+#---------------------------------------------------------------------------
+# Find file that should be link as configuration file
+#---------------------------------------------------------------------------
+for i in $dir
+do
+    finded="false"
+    for e_name in $exclue_file_arr
+    do
+        if [ "$i" = "$e_name" ]; then
+            finded="true"
+        fi
+    done
+    if [ $finded = "false" ]; then
+        mv ~/.$i ~/.$i.bk
+        ln -s $currentDir/$i ~/.$i
+    fi
+done
