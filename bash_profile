@@ -48,7 +48,7 @@ export PATH
 #---------------------------------------------------------------------------
 # Define Customized alias configuration
 #---------------------------------------------------------------------------
-alias ls="ls -G"
+alias ls="ls --color=auto"
 alias ll="ls -laG"
 alias grep="grep --color"
 
