@@ -1,0 +1,29 @@
+#!/bin/bash
+TEMP_DIR_NAME="tmp"
+exclue_file_arr="Install Uninstall README.md"
+dir=$(ls ./)
+
+currentDir=$(pwd)
+
+#---------------------------------------------------------------------------
+# Find file that should be link as configuration file
+#---------------------------------------------------------------------------
+echo "########################################"
+echo "Remove back up and original file"
+echo "########################################"
+for i in $dir
+do
+    finded="false"
+    for e_name in $exclue_file_arr
+    do
+        if [ "$i" = "$e_name" ]; then
+            finded="true"
+        fi
+    done
+    if [ $finded = "false" ]; then
+        echo "remove backup file $i"
+        rm ~/.$i.bk
+        echo "remove file $i"
+        rm ~/.$i
+    fi
+done
