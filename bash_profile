@@ -50,10 +50,10 @@ export PATH
 #---------------------------------------------------------------------------
 # Define Customized alias configuration
 #---------------------------------------------------------------------------
-if [ currentSystem = $MAC ]; then
+if [ $currentSystem = $MAC ]; then
     alias ls="ls -G"
     alias ll="ls -la"
-elif [ currentSystem = $Linux ]; then
+elif [ $currentSystem = $Linux ]; then
     alias ls="ls --color=auto"
     alias ll="ls -la"
 fi
