@@ -1,6 +1,6 @@
 #!/bin/bash
 TEMP_DIR_NAME="tmp"
-exclue_file_arr="Install README.md tmp"
+exclue_file_arr="Install Uninstall README.md tmp"
 dir=$(ls ./)
 
 currentDir=$(pwd)
