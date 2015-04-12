@@ -4,7 +4,9 @@
 # Description : Bash Environment startup configuration
 # Date : 2015-04-11
 #---------------------------------------------------------------------------
-
+MAC=Darwin
+Linux=Linux
+currentSystem=$(uname -s)
 
 #---------------------------------------------------------------------------
 # Set Java Relatied Environment
@@ -48,23 +50,28 @@ export PATH
 #---------------------------------------------------------------------------
 # Define Customized alias configuration
 #---------------------------------------------------------------------------
-alias ls="ls --color=auto"
-alias ll="ls -laG"
+if [ currentSystem = $MAC ]; then
+    alias ls="ls -G"
+    alias ll="ls -la"
+elif [ currentSystem = $Linux ]; then
+    alias ls="ls --color=auto"
+    alias ll="ls -la"
+fi
 alias grep="grep --color"
 
 #---------------------------------------------------------------------------
 # Define Customized man page
 #---------------------------------------------------------------------------
 man() {
-  env \
-  LESS_TERMCAP_mb=$(printf "\e[1;31m") \
-  LESS_TERMCAP_md=$(printf "\e[1;31m") \
-  LESS_TERMCAP_me=$(printf "\e[0m") \
-  LESS_TERMCAP_se=$(printf "\e[0m") \
-  LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
-  LESS_TERMCAP_ue=$(printf "\e[0m") \
-  LESS_TERMCAP_us=$(printf "\e[1;32m") \
-  man "$@"
+    env \
+        LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+        LESS_TERMCAP_md=$(printf "\e[1;31m") \
+        LESS_TERMCAP_me=$(printf "\e[0m") \
+        LESS_TERMCAP_se=$(printf "\e[0m") \
+        LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+        LESS_TERMCAP_ue=$(printf "\e[0m") \
+        LESS_TERMCAP_us=$(printf "\e[1;32m") \
+        man "$@"
 }
 
 # ///: end
