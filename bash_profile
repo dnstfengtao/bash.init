@@ -45,7 +45,13 @@ GRADLE_HOME=/usr/share/gradle-2.3
 PATH=$PATH:$GRADLE_HOME/bin
 export GRADLE_HOME
 export PATH
-
+#---------------------------------------------------------------------------
+# Set Groovy Related Environment
+#---------------------------------------------------------------------------
+GROOVY_HOME=/usr/share/groovy-2.4.3
+PATH=$PATH:$GROOVY_HOME/bin
+export GROOVY_HOME
+export PATH
 
 #---------------------------------------------------------------------------
 # Define Customized alias configuration
@@ -58,7 +64,8 @@ elif [ $currentSystem = $Linux ]; then
     alias ll="ls -la"
 fi
 alias grep="grep --color"
-
+alias rm="rm -i"
+alias mv="mv -i"
 #---------------------------------------------------------------------------
 # Define Customized man page
 #---------------------------------------------------------------------------
@@ -73,5 +80,11 @@ man() {
         LESS_TERMCAP_us=$(printf "\e[1;32m") \
         man "$@"
 }
+
+#----------------------------------------------------------------------------
+# Define git enhancement configuration
+#---------------------------------------------------------------------------
+source ~/.git-source/contrib/completion/git-completion.bash
+
 
 # ///: end
