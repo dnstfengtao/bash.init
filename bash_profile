@@ -52,6 +52,13 @@ GROOVY_HOME=/usr/share/groovy-2.4.3
 PATH=$PATH:$GROOVY_HOME/bin
 export GROOVY_HOME
 export PATH
+#---------------------------------------------------------------------------
+# Set Tomcat Home Environment
+#---------------------------------------------------------------------------
+TOMCAT_HOME=/usr/share/apache-tomcat-8.0.23
+PATH=$PATH:$TOMCAT_HOME/bin
+export TOMCAT_HOME
+export PATH
 
 #---------------------------------------------------------------------------
 # Define Customized alias configuration
