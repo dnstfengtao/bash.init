@@ -20,7 +20,7 @@ export PATH
 #---------------------------------------------------------------------------
 # Set Maven Relatied Environment
 #---------------------------------------------------------------------------
-MAVEN_HOME=/usr/share/apache-maven-3.2.3
+MAVEN_HOME=/opt/apache/apache-maven-3.3.3
 PATH=$PATH:$MAVEN_HOME/bin
 export MAVEN_HOME
 export PATH
@@ -55,11 +55,24 @@ export PATH
 #---------------------------------------------------------------------------
 # Set Tomcat Home Environment
 #---------------------------------------------------------------------------
-TOMCAT_HOME=/usr/share/apache-tomcat-8.0.23
+TOMCAT_HOME=/opt/apache/apache-tomcat-8.0.27
 PATH=$PATH:$TOMCAT_HOME/bin
 export TOMCAT_HOME
 export PATH
-
+#---------------------------------------------------------------------------
+# Solr Home
+#---------------------------------------------------------------------------
+SOLR_HOME=/usr/share/solr-5.2.1
+PATH=$PATH:$SOLR_HOME/bin
+export SOLR_HOME
+export PATH
+#----------------------------------------------------------------------------
+# Cobertura Home
+#----------------------------------------------------------------------------
+COBERTURA_HOME=/opt/cobertura-2.1.1
+PATH=$PATH:$COBERTURA_HOME
+export COBERTURA_HOME
+export PATH
 #---------------------------------------------------------------------------
 # Define Customized alias configuration
 #---------------------------------------------------------------------------
@@ -90,8 +103,12 @@ man() {
 
 #----------------------------------------------------------------------------
 # Define git enhancement configuration
-#---------------------------------------------------------------------------
+#----------------------------------------------------------------------------
 source ~/.git-source/contrib/completion/git-completion.bash
+
+#----------------------------------------------------------------------------
+# Define python about configuration
+#----------------------------------------------------------------------------
 
 
 # ///: end
