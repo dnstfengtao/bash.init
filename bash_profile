@@ -41,7 +41,7 @@ export PATH
 #---------------------------------------------------------------------------
 # Set Gradle Related Environment
 #---------------------------------------------------------------------------
-GRADLE_HOME=/usr/share/gradle-2.3
+GRADLE_HOME=/opt/gradle-2.8
 PATH=$PATH:$GRADLE_HOME/bin
 export GRADLE_HOME
 export PATH
@@ -109,6 +109,8 @@ source ~/.git-source/contrib/completion/git-completion.bash
 #----------------------------------------------------------------------------
 # Define python about configuration
 #----------------------------------------------------------------------------
-
+# This config item is placeholder for python package load
+PYTHONPATH=$PYTHONPATH
+export PYTHONPATH
 
 # ///: end
