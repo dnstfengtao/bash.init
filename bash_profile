@@ -21,6 +21,7 @@ export PATH
 # Set Maven Relatied Environment
 #---------------------------------------------------------------------------
 MAVEN_HOME=/opt/apache/apache-maven-3.3.3
+MVN_HOME=$MAVEN_HOME
 PATH=$PATH:$MAVEN_HOME/bin
 export MAVEN_HOME
 export PATH
@@ -48,7 +49,7 @@ export PATH
 #---------------------------------------------------------------------------
 # Set Groovy Related Environment
 #---------------------------------------------------------------------------
-GROOVY_HOME=/usr/share/groovy-2.4.3
+GROOVY_HOME=/opt/groovy-2.4.5
 PATH=$PATH:$GROOVY_HOME/bin
 export GROOVY_HOME
 export PATH
@@ -66,13 +67,8 @@ SOLR_HOME=/usr/share/solr-5.2.1
 PATH=$PATH:$SOLR_HOME/bin
 export SOLR_HOME
 export PATH
-#----------------------------------------------------------------------------
-# Cobertura Home
-#----------------------------------------------------------------------------
-COBERTURA_HOME=/opt/cobertura-2.1.1
-PATH=$PATH:$COBERTURA_HOME
-export COBERTURA_HOME
-export PATH
+#
+export CLASSPATH="/usr/local/Library/antlr-4.5.2-complete.jar:$CLASSPATH"
 #---------------------------------------------------------------------------
 # Define Customized alias configuration
 #---------------------------------------------------------------------------
@@ -86,6 +82,9 @@ fi
 alias grep="grep --color"
 alias rm="rm -i"
 alias mv="mv -i"
+# Java about alias
+alias antlr4='java -jar /usr/local/Library/antlr-4.5.2-complete.jar'
+alias grun='java org.antlr.v4.gui.TestRig'
 #---------------------------------------------------------------------------
 # Define Customized man page
 #---------------------------------------------------------------------------

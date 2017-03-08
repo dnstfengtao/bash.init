@@ -27,6 +27,7 @@
 	required = true
 [core]
 	excludesfile = /Users/finley/.gitignore_global
+	autocrlf = input
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
