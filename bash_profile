@@ -26,13 +26,6 @@ PATH=$PATH:$MAVEN_HOME/bin
 export MAVEN_HOME
 export PATH
 #---------------------------------------------------------------------------
-# Set Ant Relatied Environment
-#---------------------------------------------------------------------------
-ANT_HOME=/usr/share/apache-ant-1.9.4
-PATH=$PATH:$ANT_HOME/bin
-export ANT_HOME
-export PATH
-#---------------------------------------------------------------------------
 # Set MySql Relatied Environment
 #---------------------------------------------------------------------------
 MYSQL_HOME=/usr/local/mysql
@@ -54,22 +47,6 @@ PATH=$PATH:$GROOVY_HOME/bin
 export GROOVY_HOME
 export PATH
 #---------------------------------------------------------------------------
-# Set Tomcat Home Environment
-#---------------------------------------------------------------------------
-TOMCAT_HOME=/opt/apache/apache-tomcat-8.0.27
-PATH=$PATH:$TOMCAT_HOME/bin
-export TOMCAT_HOME
-export PATH
-#---------------------------------------------------------------------------
-# Solr Home
-#---------------------------------------------------------------------------
-SOLR_HOME=/usr/share/solr-5.2.1
-PATH=$PATH:$SOLR_HOME/bin
-export SOLR_HOME
-export PATH
-#
-export CLASSPATH="/usr/local/Library/antlr-4.5.2-complete.jar:$CLASSPATH"
-#---------------------------------------------------------------------------
 # Define Customized alias configuration
 #---------------------------------------------------------------------------
 if [ $currentSystem = $MAC ]; then
@@ -82,11 +59,6 @@ fi
 alias grep="grep --color"
 alias rm="rm -i"
 alias mv="mv -i"
-# Java about alias
-alias antlr4='java -jar /usr/local/Library/antlr-4.5.2-complete.jar'
-alias grun='java org.antlr.v4.gui.TestRig'
-#---------------------------------------------------------------------------
-# Define Customized man page
 #---------------------------------------------------------------------------
 man() {
     env \
@@ -105,11 +77,5 @@ man() {
 #----------------------------------------------------------------------------
 source ~/.git-source/contrib/completion/git-completion.bash
 
-#----------------------------------------------------------------------------
-# Define python about configuration
-#----------------------------------------------------------------------------
-# This config item is placeholder for python package load
-PYTHONPATH=$PYTHONPATH
-export PYTHONPATH
 
 # ///: end
