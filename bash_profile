@@ -20,7 +20,7 @@ export PATH
 #---------------------------------------------------------------------------
 # Set Maven Relatied Environment
 #---------------------------------------------------------------------------
-MAVEN_HOME=/opt/apache/apache-maven-3.3.3
+MAVEN_HOME=/opt/apache/apache-maven-3.5.2
 MVN_HOME=$MAVEN_HOME
 PATH=$PATH:$MAVEN_HOME/bin
 export MAVEN_HOME
@@ -75,7 +75,7 @@ man() {
 #----------------------------------------------------------------------------
 # Define git enhancement configuration
 #----------------------------------------------------------------------------
-source ~/.git-source/contrib/completion/git-completion.bash
+source ~/.git-completion.bash
 
 
 # ///: end
