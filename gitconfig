@@ -26,7 +26,7 @@
 	smudge = git lfs smudge %f
 	required = true
 [core]
-	excludesfile = /Users/finley/.gitignore_global
+	excludesfile = /Users/finleyfeng/.gitignore_global
 	autocrlf = input
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"

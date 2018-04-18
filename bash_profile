@@ -47,6 +47,12 @@ PATH=$PATH:$GROOVY_HOME/bin
 export GROOVY_HOME
 export PATH
 #---------------------------------------------------------------------------
+# Set Customize script home
+#---------------------------------------------------------------------------
+CUSTOMIZE_SCRIPT_HOME=/Users/finleyfeng/Documents/scripts
+PATH=$PATH:$CUSTOMIZE_SCRIPT_HOME
+export PATH
+#---------------------------------------------------------------------------
 # Define Customized alias configuration
 #---------------------------------------------------------------------------
 if [ $currentSystem = $MAC ]; then
