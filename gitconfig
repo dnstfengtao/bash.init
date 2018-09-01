@@ -4,8 +4,8 @@
 # Date : 2015-04-11
 #---------------------------------------------------------------------------
 [user]
-	name = finleyfeng
-	email = fengjiantao@hotmail.com
+	name = jiantao.feng
+	email = jiantao.feng@bkjk.com
 [filter "media"]
 	required = true
 	clean = git media clean %f

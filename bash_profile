@@ -11,7 +11,10 @@ currentSystem=$(uname -s)
 #---------------------------------------------------------------------------
 # Set Java Relatied Environment
 #---------------------------------------------------------------------------
-JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_8_HOME=`/usr/libexec/java_home -v 1.8`
+export JAVA_10_HOME=`/usr/libexec/java_home -v 10`
+JAVA_HOME=$JAVA_10_HOME
+#JAVA_HOME=$(/usr/libexec/java_home)
 PATH=$PATH:$JAVA_HOME/bin:$JAVA_HOME/jre/bin
 export JAVA_HOME
 export CLASSPATH=.:$JAVA_HOME
